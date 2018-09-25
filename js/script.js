@@ -1,9 +1,10 @@
-var url = 'https://restcountries.eu/rest/v1/name/';
-var countriesList = $('#countries');
-
 $(document).ready(function(){
 	console.log('DOM loaded');
 });
+
+var url = 'https://restcountries.eu/rest/v1/name/';
+var countriesList = $('#countries');
+
 
 $('#search').click(searchCountries);
 
