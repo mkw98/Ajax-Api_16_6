@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	console.log('DOM loaded');
-	var url = 'https://restcountries.eu/rest/v1/name/';
+	var url = 'https://restcountries.eu/rest/v2/name/';
 	var countriesList = $('#countries');
 
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
 	function showCountriesList(resp) {
     		countriesList.empty();
     		resp.forEach(function(item) {
-     	$('<li>').html( item.name + ', capital: ' + item.capital + ', languages: ' + item.languages).appendTo(countriesList);
+     	$('<li>').html( item.name + ', capital: ' + item.capital + "<br>" + '<img src="' +item.flag+ '" width="50">').appendTo(countriesList);
     });
 };
 });
