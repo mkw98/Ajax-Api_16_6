@@ -27,4 +27,4 @@ function showCountriesList(resp) {
     resp.forEach(function(item) {
      $('<li>').text(item.name).appendTo(countriesList);
     });
-});
+};
