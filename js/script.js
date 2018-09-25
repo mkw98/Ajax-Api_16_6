@@ -22,9 +22,11 @@ $(document).ready(function(){
 	function showCountriesList(resp) {
     		countriesList.empty();
     		resp.forEach(function(item) {
-     	$('<li>').text(item.name + ', capital: ' + item.capital + ', languauges: ' + item.languages).appendTo(countriesList);
+     	$('<li>').html( item.name + ', capital: ' + item.capital + ', languages: ' + item.languages).appendTo(countriesList);
     });
 };
 });
+
+
 
 
