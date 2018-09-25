@@ -10,11 +10,6 @@ $(document).ready(function(){
 
 	function searchCountries() {
  		var countryName = $('#country-name').val();
-  	if(!countryName.length) countryName = 'Poland';
-	}
-
-	function searchCountries() {
- 		var countryName = $('#country-name').val();
 	if(!countryName.length) countryName = 'Poland';
 	$.ajax({
   		url: url + countryName,
@@ -27,7 +22,7 @@ $(document).ready(function(){
 	function showCountriesList(resp) {
     		countriesList.empty();
     		resp.forEach(function(item) {
-     	$('<li>').text(item.name).appendTo(countriesList);
+     	$('<li>').text(item.name + ', capital:' + item.capital).appendTo(countriesList);
     });
 };
 });
